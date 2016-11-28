@@ -13,7 +13,7 @@
 
 Route::get('/', function()
 {
-    return view('home', array('name' => 'David'));
+    return view('home');
 });
 
 Route::get('auth/login', function ()
