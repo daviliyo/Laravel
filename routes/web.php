@@ -18,7 +18,7 @@ Route::get('/', function()
 
 Route::get('auth/login', function ()
 {
-    return "Login usuario";
+    return view('login');
 });
 
 Route::get('auth/logout', function ()
@@ -28,20 +28,20 @@ Route::get('auth/logout', function ()
 
 Route::get('catalog',function ()
 {
-    return "Listado películas";
+    return view('catalog.index');
 });
 
-Route::get('catalog/show/{id}', function ()
+Route::get('catalog/show/{id}', function ($id)
 {
-    return "Vista detalle película {id}";
+    return view('catalog.show', array('id' => $id));
 });
 
 Route::get('catalog/create', function ()
 {
-    return "Añadir película";
+    return view('catalog.create');
 });
 
 Route::get('catalog/edit/{id}', function ()
 {
-    return "Modificar película {id}";
+    return view('catalog.edit');
 });
