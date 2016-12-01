@@ -178,7 +178,7 @@ class CatalogController extends Controller
     public function getShow($id)
     {
 
-        return view('catalog.show', array('id' => $this->arrayPeliculas[$id]));
+        return view('catalog.show', array('pelicula' => $this->arrayPeliculas[$id], 'id' => $id));
     }
 
     public function getCreate()
@@ -188,7 +188,7 @@ class CatalogController extends Controller
 
     public function getEdit($id)
     {
-        return view('catalog.edit', array('id' => $id));
+        return view('catalog.edit', array('pelicula' => $this->arrayPeliculas[$id],'id' => $id));
     }
 
 }
